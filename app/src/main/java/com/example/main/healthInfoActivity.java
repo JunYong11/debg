@@ -17,14 +17,17 @@ public class healthInfoActivity extends AppCompatActivity {
     RelativeLayout.LayoutParams layoutParams;
     String title[][] = new String[21][];
     String[] tName = new String[]{"가슴","골반","귀","기타","눈","다리","등/허리","머리","목","발","배","생식기","손","얼굴","엉덩이","유방","입","전신","코","팔","피부"};;
-    String t;
-    int check;
+    String searchList[];
+    String t,result , cut="←";
+    int check=-1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ActionBar bar = getSupportActionBar();
         bar.hide();
         t = getIntent().getStringExtra("part");
-
+        result = getIntent().getStringExtra("list");
+        //마지막 번지는 버림
+        searchList = result.split(cut);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.healthinfo);
 
@@ -32,8 +35,11 @@ public class healthInfoActivity extends AppCompatActivity {
     }
 
     void initializeView(){
-        setTitle("건강정보");
         setT(); //title값을 설정
+        LinearLayout layout = (LinearLayout) findViewById(R.id.root_layout);
+        layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(16,16,16,50);
+
 
         //어떤 part에 해당하는지 찾는 반복문
         for(int i=0;i<tName.length;i++){
@@ -42,42 +48,79 @@ public class healthInfoActivity extends AppCompatActivity {
             }
         }
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.root_layout);
-        layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.setMargins(16,16,16,50);
+        if(check==-1){ //검색을 통해 list를 받은 경우
+            for(int i=0;i<searchList.length;i++){
+                CardView cv = new CardView(this);
+                cv.setLayoutParams(layoutParams);
+                cv.setRadius(12F);
+                cv.setContentPadding(25,25,25,25);
+                cv.setCardBackgroundColor(Color.rgb(0,170,255));
+                cv.setElevation(8F);
+                cv.setMaxCardElevation(12F);
+
+                int finalI = i;
+                cv.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              Intent intent = new Intent(getApplicationContext(), infoActivity.class);
+                                              intent.putExtra("dName",searchList[finalI]);
+
+                                              startActivity(intent);
+                                              overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                                          }
+                                      }
+                );
+                cv.addView(createLayoutList(i));
+                layout.addView(cv);
+            }
+        }
+
+        else { //part를 받아온 경우
+            for(int i=0;i<title[check].length;i++){
+                CardView cv = new CardView(this);
+                cv.setLayoutParams(layoutParams);
+                cv.setRadius(12F);
+                cv.setContentPadding(25,25,25,25);
+                cv.setCardBackgroundColor(Color.rgb(0,170,255));
+                cv.setElevation(8F);
+                cv.setMaxCardElevation(12F);
 
 
-        for(int i=0;i<title[check].length;i++){
-            CardView cv = new CardView(this);
-            cv.setLayoutParams(layoutParams);
-            cv.setRadius(12F);
-            cv.setContentPadding(25,25,25,25);
-            cv.setCardBackgroundColor(Color.rgb(0,170,255));
-            cv.setElevation(8F);
-            cv.setMaxCardElevation(12F);
+                int finalI = i;
+                cv.setOnClickListener(new View.OnClickListener() {
+                      @Override
+                      public void onClick(View v) {
+                          Intent intent = new Intent(getApplicationContext(), infoActivity.class);
+                          intent.putExtra("dName",title[check][finalI]);
 
-
-            int finalI = i;
-            cv.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                      Intent intent = new Intent(getApplicationContext(), infoActivity.class);
-                      intent.putExtra("dName",title[check][finalI]);
-
-                      startActivity(intent);
-                      overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                          startActivity(intent);
+                          overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                      }
                   }
-              }
-            );
-            cv.addView(createLayout(i));
-            layout.addView(cv);
+                );
+                cv.addView(createLayout(i));
+                layout.addView(cv);
+            }
         }
 
 
+    }
+    LinearLayout createLayoutList(int i){ //list를 받아 온 경우
+        LinearLayout tempLayout = new LinearLayout(this);
+        tempLayout.setOrientation(LinearLayout.VERTICAL);
 
+        TextView t1 = new TextView(this);
+        t1.setText(searchList[i]);
+        t1.setTextSize(24f);
+        t1.setTextColor(Color.WHITE);
+
+        tempLayout.addView(t1);
+
+
+        return tempLayout;
     }
 
-    LinearLayout createLayout(int i){
+    LinearLayout createLayout(int i){ //part를 받아 온 경우
         LinearLayout tempLayout = new LinearLayout(this);
         tempLayout.setOrientation(LinearLayout.VERTICAL);
 

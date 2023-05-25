@@ -7,12 +7,12 @@
 
     <ScrollView
         android:id="@+id/scv"
-        android:fitsSystemWindows="true"
         android:layout_width="408dp"
         android:layout_height="621dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="109dp"
-        tools:ignore="MissingConstraints">
+        android:fitsSystemWindows="true"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="6dp">
 
         <LinearLayout
             android:id="@+id/root_layout2"
@@ -26,11 +26,11 @@
         android:id="@+id/questionEdit"
         android:layout_width="330dp"
         android:layout_height="45dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="632dp"
         android:ems="10"
         android:hint="질문을 적어주세요"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,10 +38,10 @@
         android:id="@+id/questionBtn"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="695dp"
+        android:layout_marginTop="628dp"
         android:text="전송"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
