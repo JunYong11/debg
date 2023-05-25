@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/dongeuibogam.iml" filepath="$PROJECT_DIR$/.idea/dongeuibogam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/dongeuibogam.api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/dongeuibogam.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/dongeuibogam.client.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.iml" filepath="$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.test.iml" filepath="$PROJECT_DIR$/.idea/modules/example/dongeuibogam.example.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/dongeuibogam.service.test.iml" />
+    </modules>
+  </component>
+</project>

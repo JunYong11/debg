@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0FFFF">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/전신"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="548dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="전신"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/가슴"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="148dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="가슴"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/눈"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="228dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="눈"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/귀"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="148dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="귀"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/팔"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="628dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="팔"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/배"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="388dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="배"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/얼굴"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="468dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="얼굴"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/코"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="628dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="코"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/엉덩이"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="468dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="엉덩이"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/다리"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="228dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="다리"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/목"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="308dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="목"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/발"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="388dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="발"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/골반"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="148dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="골반"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/유방"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="548dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="유방"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/등허리"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="308dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="등/허리"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/손"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="468dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="손"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/머리"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="308dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="머리"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/생식기"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="388dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="생식기"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/입"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="548dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="입"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/기타"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="228dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="기타"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/피부"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="628dp"
+        android:background="#00ff0000"
+        android:onClick="onClickBtn"
+        android:text="피부"
+        android:textColor="#000000"
+        android:textSize="70px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/diseaseTitle"
+        android:layout_width="210dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:text="질병 카테고리"
+        android:textColor="#8B00FF"
+        android:textSize="75px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/searchBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/search"
+        android:backgroundTint="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

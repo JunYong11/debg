@@ -1,0 +1,29 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/border.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/layout_border.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/line.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/line_button.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/drawable/round_button.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/chatgpt.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/find.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/healthinfo.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/login.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/myinfo.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/question.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/dongeuibogam/app/src/main/res/layout/register.xml" value="0.40217391304347827" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
