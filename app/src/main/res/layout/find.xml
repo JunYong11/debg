@@ -83,23 +83,25 @@
         android:id="@+id/findPW"
         android:layout_width="117dp"
         android:layout_height="54dp"
-        android:layout_marginTop="40dp"
         android:background="#ff00ff"
         android:text="PW찾기"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.697"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
 
     <Button
         android:id="@+id/findID"
         android:layout_width="117dp"
         android:layout_height="54dp"
-        android:layout_marginTop="40dp"
-        android:text="ID찾기"
         android:background="#FFFFFF"
+        android:text="ID찾기"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.299"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
 </androidx.constraintlayout.widget.ConstraintLayout>

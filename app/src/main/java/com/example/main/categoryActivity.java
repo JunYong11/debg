@@ -21,7 +21,7 @@ public class categoryActivity extends AppCompatActivity {
     Button bArr[] = new Button[21];
 
     titleData td = new titleData();
-    String result="";
+
     int check=0;
 
 
@@ -62,6 +62,7 @@ public class categoryActivity extends AppCompatActivity {
         sBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String result="";
                 String temp = String.valueOf(key.getText());
                 for(int i=0;i<td.title.length;i++){
                     for(int j=0;j<td.title[i].length;j++){

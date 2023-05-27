@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -19,6 +20,8 @@ public class infoActivity extends AppCompatActivity {
     String[] title = new String[]{"질환명","정의","원인","증상","진단","치료","경과","주의사항"};
 
     protected void onCreate(Bundle savedInstanceState){
+        ActionBar bar = getSupportActionBar();
+        bar.hide();
         t = getIntent().getStringExtra("dName");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
@@ -47,6 +50,7 @@ public class infoActivity extends AppCompatActivity {
                     cv.setCardBackgroundColor(Color.rgb(0,170,255));
                     cv.setElevation(8F);
                     cv.setMaxCardElevation(12F);
+                    cv.setBackgroundResource(R.drawable.infoborder);
 
                     cv.addView(createLayout(i));
                     layout.addView(cv);
@@ -78,7 +82,7 @@ public class infoActivity extends AppCompatActivity {
         TextView t2 = new TextView(this);
         t2.setText(result[i]);
         t2.setTextSize(18f);
-        t2.setTextColor(Color.WHITE);
+        t2.setTextColor(Color.BLACK);
 
         tempLayout.addView(t1);
         tempLayout.addView(t2);

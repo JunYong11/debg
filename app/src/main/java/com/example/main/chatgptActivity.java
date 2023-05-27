@@ -42,6 +42,7 @@ public class chatgptActivity extends AppCompatActivity {
     ScrollView scrollview;
     LinearLayout layout;
     Button btn;
+    int time = 0;
     EditText edit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,12 +157,16 @@ public class chatgptActivity extends AppCompatActivity {
         t1.setTextColor(Color.WHITE);
         tempLayout.addView(t1);
         Toast myToast = Toast.makeText(this.getApplicationContext(),"조금만 기다려주세요...", Toast.LENGTH_SHORT);
+        t1.setText("정보를 불러오고 있습니다...");
         myToast.show();
-        input(input, t1);
+        new Thread(() -> {
+            input(input, t1);
+        }).start();
         return tempLayout;
     }
 
     public void input(String input, TextView t){
+        time=0;
         message.add(new ChatMessage(ChatMessageRole.USER.value(), input));
 
         ChatCompletionRequest chatCompletionRequest;
@@ -176,14 +181,17 @@ public class chatgptActivity extends AppCompatActivity {
             chunk.getChoices().forEach(choice -> {
                 String result = choice.getMessage().getContent();
                 if (result != null) {
+                    if(time==0){t.setText(""); time+=1;}
                     buffer.append(result);
                     System.out.print(choice.getMessage().getContent());
-                    t.setText(t.getText() + choice.getMessage().getContent());
+                    t.setText(t.getText() + choice.getMessage().getContent()); //1자씩 쌓이는 구조
                     scroll();
                 }
             });
-        }, Throwable::printStackTrace, () -> System.out.print("\n>>")); //이걸로 t1갱신
+        }, Throwable::printStackTrace, () -> System.out.print("\n>>"));
         message.add(new ChatMessage(ChatMessageRole.SYSTEM.value(), buffer.toString()));
+
+        t.invalidate();
     }
 
 
