@@ -2,6 +2,8 @@ package com.example.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.regex.Pattern;
 
 
 public class registerActivity extends AppCompatActivity {
@@ -52,6 +56,26 @@ public class registerActivity extends AppCompatActivity {
         EditAnswer = (EditText)findViewById(R.id.EditAnswer);
         s = (Spinner)findViewById(R.id.spn);
 
+        InputFilter filterAlphaNum = new InputFilter() {
+            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+                Pattern ps = Pattern.compile("^[a-zA-Z0-9]+$");
+                if (!ps.matcher(source).matches()) {
+                    return "";
+                }
+                return null;
+            }
+        };
+
+        EditID.setFilters(new InputFilter[] {
+                filterAlphaNum,
+                new InputFilter.LengthFilter(12)
+        });
+        EditPW.setFilters(new InputFilter[] {
+                filterAlphaNum,
+                new InputFilter.LengthFilter(20)
+        });
+
+
         registerBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 try {
@@ -73,7 +97,7 @@ public class registerActivity extends AppCompatActivity {
                                 finish();
                             }
                         }else{
-                            Toast.makeText(getApplicationContext(), "ID는 최소 6자리 이상입니다.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "ID는 영문+숫자 조합으로 6자리~12자리로 구성하여야합니다.",Toast.LENGTH_SHORT).show();
                         }
                     }
                     else{

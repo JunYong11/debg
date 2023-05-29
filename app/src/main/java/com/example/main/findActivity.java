@@ -62,8 +62,11 @@ public class findActivity extends AppCompatActivity {
                 info.setText("아이디");
                 EditInfo.setHint("ID");
                 check=1;
-                findPW.setBackgroundColor(Color.WHITE);
-                findID.setBackgroundColor(Color.MAGENTA);
+                findPW.setBackgroundColor(Color.parseColor("#0055FF"));
+                findPW.setTextColor(Color.WHITE);
+                findID.setBackgroundColor(Color.WHITE);
+                findID.setTextColor(Color.BLACK);
+
             }
         });
 
@@ -72,8 +75,10 @@ public class findActivity extends AppCompatActivity {
                 info.setText("닉네임");
                 EditInfo.setHint("Nickname");
                 check=0;
-                findID.setBackgroundColor(Color.WHITE);
-                findPW.setBackgroundColor(Color.MAGENTA);
+                findID.setBackgroundColor(Color.parseColor("#0055FF"));
+                findID.setTextColor(Color.WHITE);
+                findPW.setBackgroundColor(Color.WHITE);
+                findPW.setTextColor(Color.BLACK);
             }
         });
 

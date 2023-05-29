@@ -24,7 +24,8 @@
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="NICKNAME"
+        android:hint="Nickname"
+        android:maxLength="15"
         android:inputType="textPersonName"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,6 +71,7 @@
         android:layout_height="63dp"
         android:ems="10"
         android:hint="답"
+        android:maxLength="15"
         android:inputType="textPersonName"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,11 +81,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.672" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/findPW"
         android:layout_width="117dp"
         android:layout_height="54dp"
-        android:background="#ff00ff"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
         android:text="PW찾기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,11 +95,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.059" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/findID"
         android:layout_width="117dp"
         android:layout_height="54dp"
-        android:background="#FFFFFF"
+        android:background="#0055FF"
+        android:textColor="#FFFFFF"
         android:text="ID찾기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
