@@ -179,7 +179,7 @@ public class healthInfoActivity extends AppCompatActivity {
                                       }
                                   }
             );
-            cv.addView(createLayoutList(output));
+            cv.addView(createLayoutList(i, output));
             layout.addView(cv);
         }
     }
@@ -217,12 +217,12 @@ public class healthInfoActivity extends AppCompatActivity {
     }
 
 
-    LinearLayout createLayoutList(String text){ //list를 받아 온 경우
+    LinearLayout createLayoutList(int index, String text){ //list를 받아 온 경우
         LinearLayout tempLayout = new LinearLayout(this);
         tempLayout.setOrientation(LinearLayout.VERTICAL);
 
         TextView t1 = new TextView(this);
-        t1.setText(text);
+        t1.setText(String.valueOf(index+1)+ ". " + text);
         t1.setTextSize(24f);
         t1.setTextColor(Color.BLACK);
 
@@ -237,7 +237,7 @@ public class healthInfoActivity extends AppCompatActivity {
         tempLayout.setOrientation(LinearLayout.VERTICAL);
 
         TextView t1 = new TextView(this);
-        t1.setText(td.title[check][i]);
+        t1.setText(String.valueOf(i+1) + ". " + td.title[check][i]);
         t1.setTextSize(24f);
         t1.setTextColor(Color.BLACK);
 

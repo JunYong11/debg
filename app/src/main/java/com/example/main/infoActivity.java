@@ -30,6 +30,7 @@ public class infoActivity extends AppCompatActivity {
     }
 
     void initialView(){
+        duration();
         try {
             LinearLayout layout = (LinearLayout) findViewById(R.id.root_layout3);
 
@@ -67,6 +68,18 @@ public class infoActivity extends AppCompatActivity {
         }
 
     }
+
+    void duration(){
+        durationActivity task = new durationActivity();
+        try {
+            String temp = task.execute(t).get();
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     LinearLayout createLayout(int i){
         LinearLayout tempLayout = new LinearLayout(this);

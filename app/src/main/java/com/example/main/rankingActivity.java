@@ -1,8 +1,6 @@
-package com.example.main;
-
+package com.example.main;// RegisterActivity.java
 
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,29 +10,29 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 
-public class searchActivity extends AsyncTask<String, Void, String> {
+public class rankingActivity extends AsyncTask<String, Void, String> {
     String sendMsg, receiveMsg;
+
 
     @Override
     protected String doInBackground(String... strings) {
         try {
             String str;
+            // 접속할 서버 주소 (이클립스에서 android.jsp 실행시 웹브라우저 주소)
+            URL url = new URL("http://" + new ip().getIp() + ":8080/capstoneServer/webapp/ranking.jsp");
 
-            // 접속할 서버 주소 (이클립스에서 login.jsp 실행시 웹브라우저 주소)
-            URL url = new URL("http://" + new ip().getIp() +":8080/capstoneServer/webapp/search.jsp");
             System.out.println(url);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             conn.setRequestMethod("POST");
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(),"UTF-8"));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream(), "UTF-8"));
             // 전송할 데이터. GET 방식으로 작성
-            sendMsg = "&id=" + strings[0] + "&pw=" + strings[1];
+            sendMsg = "&start=" + strings[0];
 
             bw.write(sendMsg);
             bw.flush();
+
 
             //jsp와 통신 성공 시 수행
             if (conn.getResponseCode() == conn.HTTP_OK) {
@@ -46,6 +44,7 @@ public class searchActivity extends AsyncTask<String, Void, String> {
                 while ((str = reader.readLine()) != null) {
                     buffer.append(str);
                 }
+
                 receiveMsg = buffer.toString();
             } else {
                 // 통신 실패
@@ -59,5 +58,6 @@ public class searchActivity extends AsyncTask<String, Void, String> {
         //jsp로부터 받은 리턴 값
         return receiveMsg;
     }
+
 
 }

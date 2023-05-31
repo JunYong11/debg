@@ -198,8 +198,6 @@ public class chatgptActivity extends AppCompatActivity {
 
 
 
-
-
     public void close(){
         service.shutdownExecutor();
     }
