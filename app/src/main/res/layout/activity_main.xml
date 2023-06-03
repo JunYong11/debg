@@ -10,37 +10,46 @@
 
     <TextView
         android:id="@+id/headLine"
-        android:layout_width="360dp"
-        android:layout_height="48dp"
-        android:background="@drawable/round_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="로그인을 하시면 다양한 기능을 \n추가로 사용하실 수 있습니다"
-        android:textSize="18sp"
+        android:background="@drawable/infoborder"
+        android:text="로그인이 필요합니다"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.046"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/jindan"
-        android:layout_width="360dp"
-        android:layout_height="390dp"
-        android:text="로그인 후 문진표를 작성하시면\n진단내용을 확인하실 수 있습니다\n\n\n내 정보 버튼을 눌러 로그인을 진행해주세요"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/infoborder"
+        android:gravity="center"
+        android:text="문진결과 표기"
+        android:textColor="@color/black"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.464" />
 
     <TextView
         android:id="@+id/symtoms"
-        android:layout_width="360dp"
-        android:layout_height="113dp"
-        android:text="문진표 작성 후 증상정보를 확인하세요"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/infoborder"
+        android:textSize="25sp"
+        android:text="자주 찾는 질병정보"
+        android:textColor="@color/black"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -192,6 +201,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.988" />
+
+    <Button
+        android:id="@+id/arduino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아두이노 일일검사 연동"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

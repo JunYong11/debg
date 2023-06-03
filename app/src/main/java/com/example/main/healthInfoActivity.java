@@ -44,7 +44,6 @@ public class healthInfoActivity extends AppCompatActivity {
         ActionBar bar = getSupportActionBar();
         bar.hide();
 
-
         t = getIntent().getStringExtra("part");
         result = getIntent().getStringExtra("list");
         //마지막 번지는 버림
