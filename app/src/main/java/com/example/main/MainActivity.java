@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     String nick = null;
     int loginCheck=0;
     ImageButton healthInfo, main, question, chatGPT, myInfo;
-
+    TextView symtom, headLine;
     private final long finishtimeed = 1000;
     private long presstime = 0;
     public static Activity _Main_Activity;
@@ -30,13 +30,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        if(nick!=null){
+        headLine = (TextView)findViewById(R.id.headLine);
+        if(nick!=null){ //로그인 했을 경우
             loginCheck=1;
-            TextView headLine = (TextView)findViewById(R.id.headLine);
-            headLine.setText(nick + "님 안녕하세요");
-
+            headLine = (TextView)findViewById(R.id.headLine);
+            headLine.setText(nick + "님 좋은 하루 보내세요");
             //문진정보 및 증상정보까지 추가
+        }
+        else{
+            headLine.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), loginActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                    finish();
+                }
+            });
         }
         initializeView();
 
@@ -54,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             presstime = tempTime;
-            Toast.makeText(getApplicationContext(), "한번더 누르시면 앱이 종료됩니다", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "한번 더 누르시면 앱이 종료됩니다", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -65,21 +75,16 @@ public class MainActivity extends AppCompatActivity {
         chatGPT = (ImageButton) findViewById(R.id.chatGPT);
         question = (ImageButton) findViewById(R.id.question);
         main = (ImageButton) findViewById(R.id.main);
+        symtom = (TextView)findViewById(R.id.symtoms);
 
 
-        myInfo.setOnClickListener(new View.OnClickListener() {
+        symtom.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                if(loginCheck==0){
-                    Intent intent = new Intent(getApplicationContext(), loginActivity.class);
-                    startActivity(intent);
-                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                    finish();
-                }
-                else{
-                    Intent intent = new Intent(getApplicationContext(), myInfoActivity.class);
-                    startActivity(intent);
-                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                }
+                Intent intent = new Intent(getApplicationContext(), categoryActivity.class); //카테고리로 수정
+                intent.putExtra("check", 1);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
             }
         });
 

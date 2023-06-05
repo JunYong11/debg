@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutionException;
 
 public class categoryActivity extends AppCompatActivity {
     Button bArr[] = new Button[21];
-    String rank[];
+    String rank[], rankList[];
     titleData td = new titleData();
     ConstraintLayout clay,btnClay;
     LinearLayout rankLayout;
@@ -39,6 +39,8 @@ public class categoryActivity extends AppCompatActivity {
         ActionBar bar = getSupportActionBar();
         bar.hide();
         System.setProperty( "https.protocols", "TLSv1.1,TLSv1.2" );
+        check = getIntent().getIntExtra("check", 0);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category);
         initializeView();
@@ -81,9 +83,6 @@ public class categoryActivity extends AppCompatActivity {
                     rankLayout.setVisibility(View.INVISIBLE);
                     check=0;
                 }
-
-                
-
             }
         });
 
@@ -110,6 +109,23 @@ public class categoryActivity extends AppCompatActivity {
         });
         btnSetting();
 
+        if(check==1){
+            ranking();
+            //검색창과 검색버튼 표시
+            clay.bringToFront();
+            clay.invalidate();
+            clay.setVisibility(View.VISIBLE);
+            //btnClay를 invisible화해서 기존 카테고리를 제거하고, 랭킹리스트를 띄움
+            btnClay.setVisibility(View.INVISIBLE);
+            rankLayout.removeAllViews(); //앞서 작성된 텍스트뷰를 제거하기 위함
+
+            for(int i=0;i<rank.length;i++){
+                rankList(i);
+            }
+
+            check=1;
+            rankLayout.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -126,13 +142,24 @@ public class categoryActivity extends AppCompatActivity {
             tv.setBackgroundResource(R.drawable.infoborder);
             rankLayout.addView(tv);
         }
+
         TextView tv = new TextView(getApplicationContext());
-        tv.setText(rank[index]);
+        tv.setText(rankList[index]);
         tv.setTextSize(20);
         tv.setTextColor(Color.BLACK);
         tv.setTypeface(null, Typeface.BOLD);
         tv.setLayoutParams(layoutParams);
         tv.setBackgroundColor(Color.parseColor("#00ff0000"));
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), infoActivity.class);
+                intent.putExtra("dName", rank[index]);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+            }
+        });
+
         rankLayout.addView(tv);
     }
 
@@ -188,8 +215,9 @@ public class categoryActivity extends AppCompatActivity {
             String result = task.execute("start").get();
             rank = result.split(cut);
 
+            rankList = new String[rank.length];
             for(int i=0;i<rank.length;i++){
-                rank[i] = String.valueOf(i+1) + ". " + rank[i];
+                rankList[i] = String.valueOf(i+1) + ". " + rank[i];
             }
 
         } catch (ExecutionException e) {
@@ -201,7 +229,18 @@ public class categoryActivity extends AppCompatActivity {
         }
 
     }
-
+    @Override
+    public void onBackPressed() { // 뒤로가기 버튼눌렀을 때 랭킹리스트가 떠있는 상태면 꺼지지 않고 원래 모습으로 되돌림
+        if(check==1){
+            clay.setVisibility(View.INVISIBLE);
+            btnClay.setVisibility(View.VISIBLE);
+            rankLayout.setVisibility(View.INVISIBLE);
+            check=0;
+        }
+        else {
+            finish();
+        }
+    }
 
     @Override
     public void finish() {
