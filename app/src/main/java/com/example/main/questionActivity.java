@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class questionActivity extends AppCompatActivity {
-    String[] que = {"통증", "두통", "복통", "요통"};
+    String [] que = {"통증","두통","복통","요통","흉통","기침","관절통","근육통","통풍","생리통","치통","귀통","인후통","부비동 통증","신경통","관절염","협심증","좌골신경통","월경통","환좌 통증","배뇨시 통증","삼킬때 통증","눈에 통증","코에 통증","어깨에 통증","목에 통증","턱에 통증","팔에 통증","손에 통증","다리에 통증"};
     int check = 0;
 
     TextView[] tvArr1;
