@@ -24,12 +24,9 @@ import java.util.Map;
 
 public class questionActivity extends AppCompatActivity {
     String [] que = {"통증", "두통", "복통", "요통", "흉통", "기침", "관절통", "근육통", "통풍",
-            "생리통", "인후통", "부비동", "신경통", "관절염", "협심증",
-            "월경통", "골반 통증", "배뇨통", "빈뇨", "눈",
-            "코", "어깨", "목", "턱", "팔 통증", "손", "다리",
-            "소화불량", "호흡곤란", "변비", "설사", "구토",
-            "체중감소", "피로감", "발열", "오심", "두근거림", "당뇨", "고혈압",
-            "빈혈", "천식"};
+            "생리통", "인후통", "신경통", "관절염", "협심증",  "월경통", "배뇨통",  "빈뇨",
+            "소화불량", "호흡곤란", "변비", "설사", "구토", "체중감소", "피로감", "발열", "오심", "두근거림", "당뇨", "고혈압", "빈혈", "천식",
+            "부비동", "코", "어깨", "목", "팔", "손", "다리", "눈",  "골반"};
     int check = 0;
 
     TextView[] tvArr1;
@@ -102,7 +99,12 @@ public class questionActivity extends AppCompatActivity {
             tvArr1[i].setTextSize(24);
             tvArr1[i].setTextColor(Color.BLACK);
             tvArr1[i].setTypeface(null, Typeface.BOLD);
-            tvArr1[i].setText(numArr[i] + ". " + queArr[i] + "이 있습니까?");
+            if(i <= 30){
+                tvArr1[i].setText(numArr[i] + ". " + queArr[i] + " 이/가 있습니까?");
+            }
+            else{
+                tvArr1[i].setText(numArr[i] + ". " + queArr[i] + "에 이상이 있습니까?");
+            }
             rr.addView(tvArr1[i]);
             tt.addView(rgArr[i]);
             ll.addView(rr);
