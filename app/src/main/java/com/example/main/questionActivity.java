@@ -31,12 +31,14 @@ public class questionActivity extends AppCompatActivity {
     RadioButton[] r1;
     RadioButton[] r2;
     int checkedRadioButtonId;
-
-    EditText name;
+    String nick;
+    String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        nick = getIntent().getStringExtra("nick");
+        result = getIntent().getStringExtra("result");
         setContentView(R.layout.question);
         title();
         question(que);
@@ -64,23 +66,12 @@ public class questionActivity extends AppCompatActivity {
         rgArr = new RadioGroup[numArr.length];
         r1 = new RadioButton[numArr.length];
         r2 = new RadioButton[numArr.length];
-        name = new EditText(this);
 
 
         for (int i = 0; i < tvArr1.length; i++) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.ll);
             LinearLayout rr = new LinearLayout(this);
 
-            if(i ==0){
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(600, 150);
-
-                name.setHint("이름을 입력해주세요");
-                name.setTextSize(23);
-                name.setLayoutParams(params);
-                name.setPrivateImeOptions("defaultInputmode=korean;");
-                ll.addView(name);
-
-            }
             tvArr1[i] = new TextView(this);
             rgArr[i] = new RadioGroup(this);
             r1[i] = new RadioButton(this);
@@ -105,8 +96,6 @@ public class questionActivity extends AppCompatActivity {
             rr.addView(tvArr1[i]);
             rr.addView(rgArr[i]);
             ll.addView(rr);
-
-
         }
     }
 
@@ -134,8 +123,6 @@ public class questionActivity extends AppCompatActivity {
                         }
                     }
                     if(que.length == check){
-                        String[] result = new String[5];
-                        String NM = name.getText().toString();
                         String RT  = "";
                         for(int i =0;i<rgArr.length;i++) {
                             boolean isChecked = r1[i].isChecked();
@@ -144,11 +131,8 @@ public class questionActivity extends AppCompatActivity {
                             }
                         }
                         queActivity task = new queActivity();
-                        for(int i =0;i<result.length;i++) {
-                            result[i] = task.execute(NM, RT).get();
-                            Toast.makeText(getApplicationContext(), result[i], Toast.LENGTH_SHORT).show();
-                        }
-
+                        result = task.execute(nick, RT).get();
+                        finish();
                     }
                 } catch (Exception e) {
                     Log.i("DBtest", ".....ERROR.....!");
@@ -160,6 +144,14 @@ public class questionActivity extends AppCompatActivity {
 
     @Override
     public void finish() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("nickname", nick);
+        if(result.equals("")){
+            result = "의심되는 증상이 없습니다.";
+        }
+
+        intent.putExtra("jindan", result);
+        startActivity(intent);
         super.finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

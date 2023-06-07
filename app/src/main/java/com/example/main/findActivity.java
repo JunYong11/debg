@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.concurrent.ExecutionException;
+
 
 public class findActivity extends AppCompatActivity {
     Button findBtn, findPW, findID;
@@ -22,6 +24,7 @@ public class findActivity extends AppCompatActivity {
     TextView info;
     Spinner s;
     int check = 0;
+    String result;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.find);
@@ -85,7 +88,6 @@ public class findActivity extends AppCompatActivity {
         findBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 try {
-                    String result;
                     String inf = EditInfo.getText().toString();
                     String ans = EditAnswer.getText().toString();
                     String spn = (String) s.getSelectedItem();
@@ -95,7 +97,6 @@ public class findActivity extends AppCompatActivity {
                         findingActivity task = new findingActivity();
                         result = task.execute(inf, ans, spn, ch).get();
                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                        finish();
                     }
                     else{
                         Toast.makeText(getApplicationContext(), "비어있는 칸을 채워주세요.",Toast.LENGTH_SHORT).show();
@@ -109,7 +110,6 @@ public class findActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, loginActivity.class));
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
         finish();
     }

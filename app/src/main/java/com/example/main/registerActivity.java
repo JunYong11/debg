@@ -111,10 +111,10 @@ public class registerActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        startActivity(new Intent(this, loginActivity.class));
-        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-        finish();
+    public void finish() {
+        super.finish();
+        //finish, back버튼 누를 때 공통사항, 0.3초 사라지는 애니메이션
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
 }

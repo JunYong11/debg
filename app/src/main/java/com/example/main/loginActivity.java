@@ -42,14 +42,13 @@ public class loginActivity extends AppCompatActivity {
                 //intent.putExtra("email",email); << 이렇게 사용하면 키 값과 데이터 저장 가능
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                finish();
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
                     String result;
-                    String[] nickname = new String[3];
+                    String[] nickname;
                     String ID = EditID.getText().toString();
                     String PW = EditPW.getText().toString();
 
@@ -58,17 +57,34 @@ public class loginActivity extends AppCompatActivity {
                         result = task.execute(ID, PW).get();
 
                         nickname = result.split("!");
-                        if (nickname[0].equals("로그인 성공")) {
 
+                        if(nickname.length==2){
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             intent.putExtra("nickname",nickname[1]);
                             startActivity(intent);
                             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                             finish();
                         }
-                        else {
-                            Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
+                        else{
+                            if (nickname[0].equals("로그인 성공")) {
+
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                intent.putExtra("nickname",nickname[1]);
+                                if(nickname[2]!=null && !nickname[2].equals("null")){
+                                    intent.putExtra("jindan", nickname[2]);
+                                }
+                                if(nickname[2].equals("null")){
+                                    intent.putExtra("jindan", "의심되는 증상이 없습니다.");
+                                }
+                                startActivity(intent);
+                                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                                finish();
+                            }
+                            else {
+                                Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 다시 확인해주세요.", Toast.LENGTH_SHORT).show();
+                            }
                         }
+
 
 
                     }
@@ -90,7 +106,6 @@ public class loginActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), findActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-                finish();
             }
         });
     }

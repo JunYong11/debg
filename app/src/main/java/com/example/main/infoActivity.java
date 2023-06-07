@@ -71,13 +71,18 @@ public class infoActivity extends AppCompatActivity {
 
     void duration(){
         durationActivity task = new durationActivity();
+        new Thread(){
+            @Override
+            public void run(){
         try {
-            String temp = task.execute(t).get();
+                    String temp = task.execute(t).get();
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+            }
+        }.start();
     }
 
 
