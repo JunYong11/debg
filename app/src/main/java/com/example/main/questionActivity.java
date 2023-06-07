@@ -1,6 +1,7 @@
 package com.example.main;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class questionActivity extends AppCompatActivity {
-    String [] que = {"통증","두통","복통","요통","흉통","기침","관절통","근육통","통풍","생리통","치통","귀통","인후통","부비동 통증","신경통","관절염","협심증","좌골신경통","월경통","환좌 통증","배뇨시 통증","삼킬때 통증","눈에 통증","코에 통증","어깨에 통증","목에 통증","턱에 통증","팔에 통증","손에 통증","다리에 통증"};
+    String [] que = {"통증", "두통", "복통", "요통", "흉통"};
     int check = 0;
 
     TextView[] tvArr1;
@@ -133,18 +134,21 @@ public class questionActivity extends AppCompatActivity {
                         }
                     }
                     if(que.length == check){
-                        String result;
+                        String[] result = new String[5];
                         String NM = name.getText().toString();
                         String RT  = "";
-                        for(int i =0;i<rgArr.length;i++){
+                        for(int i =0;i<rgArr.length;i++) {
                             boolean isChecked = r1[i].isChecked();
-                            if(isChecked == true) {
-                                RT += que[i]+",";
+                            if (isChecked == true) {
+                                RT += que[i] + ",";
                             }
                         }
-                        Toast.makeText(getApplicationContext(), "완료 되었습니다.", Toast.LENGTH_SHORT).show();
                         queActivity task = new queActivity();
-                        result = task.execute(NM,RT).get();
+                        for(int i =0;i<result.length;i++) {
+                            result[i] = task.execute(NM, RT).get();
+                            Toast.makeText(getApplicationContext(), result[i], Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 } catch (Exception e) {
                     Log.i("DBtest", ".....ERROR.....!");
