@@ -23,7 +23,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class questionActivity extends AppCompatActivity {
-    String [] que = {"통증", "두통", "복통", "요통", "흉통"};
+    String [] que = {"통증", "두통", "복통", "요통", "흉통", "기침", "관절통", "근육통", "통풍",
+            "생리통", "인후통", "부비동", "신경통", "관절염", "협심증",
+            "월경통", "골반 통증", "배뇨통", "빈뇨", "눈",
+            "코", "어깨", "목", "턱", "팔 통증", "손", "다리",
+            "소화불량", "호흡곤란", "변비", "설사", "구토",
+            "체중감소", "피로감", "발열", "오심", "두근거림", "당뇨", "고혈압",
+            "빈혈", "천식"};
     int check = 0;
 
     TextView[] tvArr1;
@@ -71,6 +77,10 @@ public class questionActivity extends AppCompatActivity {
         for (int i = 0; i < tvArr1.length; i++) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.ll);
             LinearLayout rr = new LinearLayout(this);
+            rr.setGravity(Gravity.CENTER);
+
+            LinearLayout tt = new LinearLayout(this);
+            tt.setGravity(Gravity.CENTER);
 
             tvArr1[i] = new TextView(this);
             rgArr[i] = new RadioGroup(this);
@@ -87,15 +97,16 @@ public class questionActivity extends AppCompatActivity {
 
             rgArr[i].addView(r1[i]);
             rgArr[i].addView(r2[i]);
-            layoutParams.setMargins(0, 0, 0, 50); // 세로 간격을 20dp로 설정합니다.
+            layoutParams.setMargins(0, 10, 0, 10); // 세로 간격을 20dp로 설정합니다.
             tvArr1[i].setLayoutParams(layoutParams);
-            tvArr1[i].setTextSize(23);
+            tvArr1[i].setTextSize(24);
             tvArr1[i].setTextColor(Color.BLACK);
             tvArr1[i].setTypeface(null, Typeface.BOLD);
             tvArr1[i].setText(numArr[i] + ". " + queArr[i] + "이 있습니까?");
             rr.addView(tvArr1[i]);
-            rr.addView(rgArr[i]);
+            tt.addView(rgArr[i]);
             ll.addView(rr);
+            ll.addView(tt);
         }
     }
 
@@ -130,9 +141,14 @@ public class questionActivity extends AppCompatActivity {
                                 RT += que[i] + ",";
                             }
                         }
-                        queActivity task = new queActivity();
-                        result = task.execute(nick, RT).get();
-                        finish();
+                        if(RT.split(",").length > 4){
+                            queActivity task = new queActivity();
+                            result = task.execute(nick, RT).get();
+                            finish();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "증상을 3개 이상 선택해주세요", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 } catch (Exception e) {
                     Log.i("DBtest", ".....ERROR.....!");

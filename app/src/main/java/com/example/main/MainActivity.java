@@ -3,6 +3,7 @@ package com.example.main;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,17 @@ public class MainActivity extends AppCompatActivity {
                 layoutParams.setMargins(16,16,16,32);
 
                 for(int i=0;i<disease.length;i++){
+
+                    if(i==0){
+                        TextView tv = new TextView(this);
+                        tv.setTypeface(tv.getTypeface(), Typeface.BOLD);
+                        tv.setText("문진결과 의심질병\n");
+                        tv.setTextSize(24);
+                        tv.setTextColor(Color.GRAY);
+                        tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                        munjin.addView(tv);
+                    }
+
                     CardView cv = new CardView(this);
                     cv.setLayoutParams(layoutParams);
                     cv.setRadius(12F);
