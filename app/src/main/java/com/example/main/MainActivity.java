@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     String nick = null;
     int loginCheck=0;
     ImageButton healthInfo, main, question, chatGPT, myInfo;
-    TextView symtom, headLine;
+    Button arduino;
+    TextView symtom, headLine, jindan;
     private final long finishtimeed = 1000;
     private long presstime = 0;
     public static Activity _Main_Activity;
@@ -76,6 +78,22 @@ public class MainActivity extends AppCompatActivity {
         question = (ImageButton) findViewById(R.id.question);
         main = (ImageButton) findViewById(R.id.main);
         symtom = (TextView)findViewById(R.id.symtoms);
+        jindan = (TextView)findViewById(R.id.jindan);
+        arduino = (Button)findViewById(R.id.arduino);
+
+        //jindan 값 바꿔서 진단표 수정
+        
+
+
+
+        arduino.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), arduinoActivity.class); //카테고리로 수정
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+            }
+        });
 
 
         symtom.setOnClickListener(new View.OnClickListener() {

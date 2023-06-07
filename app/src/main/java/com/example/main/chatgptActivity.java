@@ -33,7 +33,7 @@ public class chatgptActivity extends AppCompatActivity {
     //chatgpt
     public static String answer = "";
     int cv;
-    public static OpenAiService service = new OpenAiService("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");
+    public static OpenAiService service = new OpenAiService("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");
     public static List<ChatMessage> message = new ArrayList<ChatMessage>();
     //layout
 
