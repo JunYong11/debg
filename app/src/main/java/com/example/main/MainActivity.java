@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         question.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), question_ctg.class);
+                Intent intent = new Intent(getApplicationContext(), questionActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
             }
