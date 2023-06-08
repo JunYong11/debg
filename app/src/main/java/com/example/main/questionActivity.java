@@ -164,7 +164,10 @@ public class questionActivity extends AppCompatActivity {
     public void finish() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("nickname", nick);
-        if(result.equals("")){
+        if(result==null){
+
+        }
+        else if(result.equals("")){
             result = "의심되는 증상이 없습니다.";
         }
 

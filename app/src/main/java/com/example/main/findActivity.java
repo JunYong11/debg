@@ -110,8 +110,9 @@ public class findActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-        finish();
+        super.finish();
+        //finish, back버튼 누를 때 공통사항, 0.3초 사라지는 애니메이션
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
 }
