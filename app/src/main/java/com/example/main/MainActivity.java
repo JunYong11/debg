@@ -228,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Intent intent = new Intent(getApplicationContext(), myInfoActivity.class);
+                    intent.putExtra("nick", nick);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 }
