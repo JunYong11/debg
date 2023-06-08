@@ -1,5 +1,6 @@
 package com.example.main;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -165,6 +166,7 @@ public class chatgptActivity extends AppCompatActivity {
         return tempLayout;
     }
 
+    @SuppressLint("NewApi")
     public void input(String input, TextView t){
         time=0;
         message.add(new ChatMessage(ChatMessageRole.USER.value(), input));

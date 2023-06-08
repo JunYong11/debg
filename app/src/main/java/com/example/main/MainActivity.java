@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
             loginCheck=1;
             headLine = (TextView)findViewById(R.id.headLine);
             headLine.setText(nick + "님 좋은 하루 보내세요");
-            //문진정보 및 증상정보까지 추가
             if(result.equals("의심되는 증상이 없습니다.")){
                 jindan.setText(result);
             }
@@ -63,9 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 munjin.setBackgroundColor(Color.parseColor("#00ff0000"));
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
                 layoutParams.setMargins(16,16,16,32);
-
                 for(int i=0;i<disease.length;i++){
-
                     if(i==0){
                         TextView tv = new TextView(this);
                         tv.setTypeface(tv.getTypeface(), Typeface.BOLD);
@@ -75,17 +72,13 @@ public class MainActivity extends AppCompatActivity {
                         tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                         munjin.addView(tv);
                     }
-
                     CardView cv = new CardView(this);
                     cv.setLayoutParams(layoutParams);
                     cv.setRadius(12F);
                     cv.setContentPadding(25,25,25,25);
                     cv.setCardBackgroundColor(Color.parseColor("#00ff0000"));
-
                     cv.setElevation(8F);
                     cv.setMaxCardElevation(12F);
-    //                cv.setBackgroundResource(R.drawable.infoborder);
-
                     int fI = i;
                     cv.setOnClickListener(new View.OnClickListener() {
                                               @Override

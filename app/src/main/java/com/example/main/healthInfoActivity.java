@@ -131,8 +131,6 @@ public class healthInfoActivity extends AppCompatActivity {
             tv.setText(tName[check]);
             setCardViewPart();
         }
-
-
     }
 
 
