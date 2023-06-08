@@ -59,8 +59,6 @@ public class infoActivity extends AppCompatActivity {
             }
 
 
-
-
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
@@ -71,18 +69,12 @@ public class infoActivity extends AppCompatActivity {
 
     void duration(){
         durationActivity task = new durationActivity();
-        new Thread(){
-            @Override
-            public void run(){
         try {
-                    String temp = task.execute(t).get();
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            String temp = task.execute(t).get();
         }
+        catch(Exception e){
+
             }
-        }.start();
     }
 
 
@@ -104,7 +96,6 @@ public class infoActivity extends AppCompatActivity {
 
         tempLayout.addView(t1);
         tempLayout.addView(t2);
-
 
         return tempLayout;
     }
