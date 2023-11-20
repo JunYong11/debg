@@ -10,8 +10,8 @@ App 개발(ppt 13-17, 32-40)
 - 상세 개발 : <br>Oracle Cloud DB를 통해 공유DB 구축<br>Tomcat을 통해 웹 서버를 구축하고 java & jsp를 이용하여 android <-> DB 간 통신을 담당하는 기능 개발<br>App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, ChatGPT Q&A, 일일 건강 체크) 개발
 
 ##### 주요 스크린샷
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/255c6674-1b0e-4d46-a620-2725bf3cf47e)
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/c655b5b0-857e-4c6e-84b0-cfeb9f5a7d9a)
+![image](https://github.com/akdlcnd0994/debg/assets/28687142/255c6674-1b0e-4d46-a620-2725bf3cf47e)<br>
+![image](https://github.com/akdlcnd0994/debg/assets/28687142/c655b5b0-857e-4c6e-84b0-cfeb9f5a7d9a)<br>
 ![image](https://github.com/akdlcnd0994/debg/assets/28687142/4ead493f-bfaa-49da-8c74-6afd5159064e)
 ![image](https://github.com/akdlcnd0994/debg/assets/28687142/58c6b113-40df-49ea-abfc-dc03ef0ecdb9)
 
