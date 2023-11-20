@@ -4,11 +4,20 @@
 <br>
 App 개발(ppt 13-17, 32-40)
 
-- 개발기간 : 2023.03 ~ 2023.06
-- 프로젝트 인원 : 3명
-- 역할 : Oracle Cloud DB구축, 서버 개발, 앱 개발
-- 상세 개발 : <br>Oracle Cloud DB를 통해 공유DB 구축<br>Tomcat을 통해 웹 서버를 구축하고 java & jsp를 이용하여 android <-> DB 간 통신을 담당하는 기능 개발<br>App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, ChatGPT Q&A, 일일 건강 체크) 개발
-
+### 개발기간 : 2023.03 ~ 2023.06
+### 프로젝트 인원 : 3명
+### 역할 : Oracle Cloud DB구축, 서버 개발, 앱 개발
+### 상세 개발 : 
+- Oracle Cloud DB를 통해 공유DB 구축
+- Tomcat을 통해 웹 서버를 구축하고 java & jsp를 이용하여 android <-> DB 간 통신을 담당하는 기능 개발
+- App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, ChatGPT Q&A, 일일 건강 체크) 개발
+### 개발 환경 및 언어 : 
+- Android Studio
+- Eclipse
+- Tomcat
+- Oracle Cloud
+- Java
+- JSP
 # 주요 스크린샷
 ![image](https://github.com/akdlcnd0994/debg/assets/28687142/255c6674-1b0e-4d46-a620-2725bf3cf47e)<br>
 ![image](https://github.com/akdlcnd0994/debg/assets/28687142/c655b5b0-857e-4c6e-84b0-cfeb9f5a7d9a)<br>
