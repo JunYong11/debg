@@ -10,7 +10,7 @@ App 개발(ppt 13-17, 32-40)
 ### 상세 개발 : 
 - Oracle Cloud DB를 통해 공유DB 구축
 - Tomcat을 통해 웹 서버를 구축하고 java & jsp를 이용하여 android <-> DB 간 통신을 담당하는 기능 개발
-- App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, ChatGPT Q&A, 일일 건강 체크) 개발
+- App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, 자주찾는 질병정보, ChatGPT Q&A, 일일 건강 체크) 개발
 ### 개발 환경 및 언어 : 
 - Android Studio
 - Eclipse
