@@ -1,6 +1,7 @@
 # 캡스톤디자인 Android App 동의보감 프로젝트
 
 상세정보 [PPT](https://github.com/akdlcnd0994/debg/blob/main/%EB%8F%99%EC%9D%98%EB%B3%B4%EA%B0%90(%EC%BB%B4%EA%B3%B58%EC%A1%B0)%20%EC%BA%A1%EC%8A%A4%ED%86%A4%20%EB%94%94%EC%9E%90%EC%9D%B8%20%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pptx)
+<br>
 App 개발(ppt 13-17, 32-40)
 
 - 개발기간 : 2023.03 ~ 2023.06
