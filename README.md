@@ -18,5 +18,6 @@ App 개발(ppt 13-17, 32-40)
 # 주요 스크린샷
 <img src="https://github.com/JunYong11/dege/assets/92434317/069f03ad-ab44-4846-a11b-648e96f84df5" width="300" height="600"/> <br>
 <img src="https://github.com/JunYong11/dege/assets/92434317/170e3a11-f3ad-4dad-b2c8-965e746c0a8a" width="300" height="600"/> <br>
+<img src="https://github.com/JunYong11/dege/assets/92434317/92ec6405-b714-4039-a50e-5a2d07270d15" width="300" height="600"/> <br>
 <img src="https://github.com/JunYong11/dege/assets/92434317/89c99205-6882-4a4c-ae22-bf86afc36078" width="300" height="600"/>
 
