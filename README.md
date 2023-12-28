@@ -15,5 +15,5 @@ App 개발(ppt 13-17, 32-40)
 - Android Studio
 - Java
 # 주요 스크린샷
-<img src="https://github.com/JunYong11/dege/assets/92434317/069f03ad-ab44-4846-a11b-648e96f84df5" width="300" height="700"/>
+<img src="https://github.com/JunYong11/dege/assets/92434317/069f03ad-ab44-4846-a11b-648e96f84df5" width="300" height="600"/>
 
