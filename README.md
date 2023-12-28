@@ -9,8 +9,8 @@ App 개발(ppt 13-17, 32-40)
 ### 역할 : Oracle Cloud DB개발, 서버 개발, 앱 개발
 ### 상세 개발 : 
 - App(문진표, 내정보) 개발
-- Oracle Cloud DB를 통해 App에 관련한 DB 개발
-- java & jsp(Tomcat)를 이용하여 App에 관련한 android <-> DB 간 통신을 담당하는 기능 개발
+- Oracle Cloud DB를 통해 App관련 DB 개발
+- java & jsp(Tomcat)를 이용하여 App관련 android <-> DB 간 통신을 담당하는 기능 개발
 - 문진 알고리즘 개발
 ### 개발 환경 및 언어 : 
 - Android Studio
