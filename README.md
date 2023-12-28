@@ -15,13 +15,5 @@ App 개발(ppt 13-17, 32-40)
 - Android Studio
 - Java
 # 주요 스크린샷
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/255c6674-1b0e-4d46-a620-2725bf3cf47e)<br>
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/c655b5b0-857e-4c6e-84b0-cfeb9f5a7d9a)<br>
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/4ead493f-bfaa-49da-8c74-6afd5159064e)
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/58c6b113-40df-49ea-abfc-dc03ef0ecdb9)
+![image](https://github.com/JunYong11/dege/assets/92434317/27525c1d-0f00-4ee7-bb00-6f891e5ceeda)
 
-# 질환백과
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/f0fd41e5-a188-4b6d-9c40-f9b19771f9a8)
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/c7361755-79d7-4495-9749-08a20d591633)
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/8b1e4648-b3a5-420f-9707-6ae13afd9b7a)
-![image](https://github.com/akdlcnd0994/debg/assets/28687142/6c532fdd-43f9-4d96-b0bd-06888483ee5e)
