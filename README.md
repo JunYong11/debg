@@ -6,14 +6,17 @@ App 개발(ppt 13-17, 32-40)
 
 ### 개발기간 : 2023.03 ~ 2023.06
 ### 프로젝트 인원 : 3명
-### 역할 : Oracle Cloud DB구축, 서버 개발, 앱 개발
+### 역할 : Oracle Cloud DB개발, 서버 개발, 앱 개발
 ### 상세 개발 : 
-- Oracle Cloud DB를 통해 공유DB 구축
-- Tomcat을 통해 웹 서버를 구축하고 java & jsp를 이용하여 android <-> DB 간 통신을 담당하는 기능 개발
-- App(메인, 로그인, 회원가입, ID/PW찾기, 질환백과, 자주찾는 질병정보, ChatGPT Q&A, 일일 건강 체크) 개발
+- App(문진표, 내정보) 개발
+- Oracle Cloud DB를 통해 App에 관련한 DB 개발
+- java & jsp(Tomcat)를 이용하여 App에 관련한 android <-> DB 간 통신을 담당하는 기능 개발
+- 문진 알고리즘 개발
 ### 개발 환경 및 언어 : 
 - Android Studio
 - Java
 # 주요 스크린샷
 <img src="https://github.com/JunYong11/dege/assets/92434317/069f03ad-ab44-4846-a11b-648e96f84df5" width="300" height="600"/>
+<img src="https://github.com/JunYong11/dege/assets/92434317/170e3a11-f3ad-4dad-b2c8-965e746c0a8a" width="300" height="600"/>
+<img src="https://github.com/JunYong11/dege/assets/92434317/89c99205-6882-4a4c-ae22-bf86afc36078" width="300" height="600"/>
 
