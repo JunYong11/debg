@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.HashMap;
 import java.util.Map;
 
+//DB 증상 스키마에서 많이 등장하는 단어를 기준으로 뽑아낸 40가지 데이터
 public class questionActivity extends AppCompatActivity {
     String [] que = {"통증", "두통", "복통", "요통", "흉통", "기침", "관절통", "근육통", "통풍",
             "생리통", "인후통", "신경통", "관절염", "협심증",  "월경통", "배뇨통",  "빈뇨",
